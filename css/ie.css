@@ -1,0 +1,22 @@
+.btn-login {filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#313131', endColorstr='#444444',GradientType=0 );}
+.btn-login:hover,
+.login-holder_open .btn-login {
+	filter:none;
+}
+.button,
+.add-button {filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e5e5e5',GradientType=0 );}
+.button:hover,
+.add-button:hover {filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd0002', endColorstr='#db0002',GradientType=0 );}
+.button:active,
+.add-button:active,
+.button:focus,
+.add-button:focus {filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d90002', endColorstr='#fc2022',GradientType=0 );}
+.nav-top {
+	background:#e8e8e8;
+	zoom:1;
+}
+.btn-yes,
+.btn-no {filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8f8f8',GradientType=0 );}
+.btn-yes:hover {filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75c453', endColorstr='#58900e',GradientType=0 );}
+.btn-yes:active,
+.btn-yes:focus {filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#568d0b', endColorstr='#81c861',GradientType=0 );}

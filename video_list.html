@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Росинформбюро</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin,cyrillic,latin-ext,cyrillic-ext' rel='stylesheet' type='text/css'>
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/jcf.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="css/ie.css">
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <script>
+        // replace custom forms
+        jcf.lib.domReady(function(){
+            jcf.customForms.replaceAll();
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="page">
+            <div class="topbar">
+                <div class="container-fluid">
+                    <div class="row-fluid clearfix">
+                        <div class="aside-column">
+                            <div class="topbar__social">
+                                <a class="ico ico_topbar_fb" href="javascript:void(0);"></a>
+                                <a class="ico ico_topbar_tw" href="javascript:void(0);"></a>
+                                <a class="ico ico_topbar_vk" href="javascript:void(0);"></a>
+                            </div>
+                            <div class="login-holder">
+                                <a id="jsLoginBtn" class="btn btn-login" href="javascript:void(0);"><span><i class="ico ico-login"></i>Войти <i class="ico ico-login-arrow"></i></span></a>
+                                <div class="login-box">
+                                    <div class="login-box__hdr line">
+                                        <a id="jsLoginClose" class="login-box__close" href="javascript:void(0);">Close</a>
+                                        <ul class="tabset line">
+                                            <li class="tabset__item"><a class="tabset__link tabset__link_active" href="#tab1">Авторизация</a></li>
+                                            <li class="tabset__item"><a class="tabset__link" href="#tab2">Регистрация</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab__content login-box__cnt">
+                                        <div id="tab1" class="tab">
+                                            <form id="login-form" class="login-form">
+                                                <div class="row-fluid">
+                                                    <label class="form-label" for="login1">Логин</label>
+                                                </div>
+                                                <div class="row-fluid form__row">
+                                                    <div class="b-input-i line"><input id="login1" type="text" value="" class="b-input"></div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <a class="b-link b-link_small jsRecoverLink" href="javascript:void(0);">Забыли пароль?</a>
+                                                    <label class="form-label" for="password">Пароль</label>
+                                                </div>
+                                                <div class="row-fluid form__row">
+                                                    <div class="b-input-i line"><input id="password" type="text" value="" class="b-input"></div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <span class="enter-plugin__ttl enter-plugin__ttl_login">Войти через соц.сети</span>
+                                                </div>
+                                                <div class="row-fluid form__row">
+                                                    <div class="enter-plugin">
+                                                        <a class="enter-plugin_link" href="javascript:void(0);"><i class="ico ico_plugin_google"></i></a>
+                                                        <a class="enter-plugin_link" href="javascript:void(0);"><i class="ico ico_plugin_google-plus"></i></a>
+                                                        <a class="enter-plugin_link" href="javascript:void(0);"><i class="ico ico_plugin_vk"></i></a>
+                                                        <a class="enter-plugin_link" href="javascript:void(0);"><i class="ico ico_plugin_fb"></i></a>
+                                                        <a class="enter-plugin_link" href="javascript:void(0);"><i class="ico ico_plugin_tw"></i></a>
+                                                        <a class="enter-plugin_link" href="javascript:void(0);"><i class="ico ico_plugin_ya"></i></a>
+                                                        <a class="enter-plugin_link" href="javascript:void(0);"><i class="ico ico_plugin_mw"></i></a>
+                                                        <a class="enter-plugin_link" href="javascript:void(0);"><i class="ico ico_plugin_odnklas"></i></a>
+                                                        <a class="enter-plugin_link" href="javascript:void(0);"><i class="ico ico_plugin_mailru"></i></a>
+                                                        <a class="enter-plugin_link" href="javascript:void(0);"><i class="ico ico_plugin_lj"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <a class="button save-button" href="javascript:void(0);">Войти</a>
+                                                    <label class="login-form__remember">
+                                                        <input type="checkbox" class="form__check default"/>
+                                                        Запомнить меня
+                                                    </label>
+                                                </div>
+                                            </form>
+                                            <form id="recover-form" class="recover-form" action="#">
+                                                <h3>Востановление пароля</h3>
+                                                <p><strong>Введите адрес своей электронной почты и мы вышлем вам новый пароль:</strong></p>
+                                                <div class="row-fluid">
+                                                    <label class="form-label" for="email-recover">E-mail *</label>
+                                                </div>
+                                                <div class="row-fluid form__row">
+                                                    <div class="b-input-i line"><input id="email-recover" class="b-input" type="text" value=""></div>
+                                                </div>
+                                                <div class="form__row">
+                                                    <span class="form__important">* обязательные для заполнения поля</span>
+                                                </div>
+                                                <div class="row_fluid">
+                                                    <a class="button save-button" href="javascript:void(0);"><span>Отправить</span></a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div id="tab2" class="tab">
+                                            <form class="login-form" action="#">
+                                                <div class="row-fluid">
+                                                    <label class="form-label" for="login2">Логин (e-mail): *</label>
+                                                </div>
+                                                <div class="row-fluid form__row">
+                                                    <div class="b-input-i line"><input id="login2" type="text" value="" class="b-input"></div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <label class="form-label" for="password2">Пароль*</label>
+                                                </div>
+                                                <div class="row-fluid form__row">
+                                                    <div class="b-input-i line"><input id="password2" type="password" value="" class="b-input"></div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <label class="form-label" for="re-password2">Повторите пароль*</label>
+                                                </div>
+                                                <div class="row-fluid form__row">
+                                                    <div class="b-input-i line"><input id="re-password2" type="password" value="" class="b-input"></div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <label class="form-label" for="fname2">Имя</label>
+                                                </div>
+                                                <div class="row-fluid form__row">
+                                                    <div class="b-input-i line"><input id="fname2" type="text" value="" class="b-input"></div>
+                                                </div>
+                                                <div class="row-fluid form__row">
+                                                    <div class="span6">
+                                                        <div class="row-fluid">
+                                                            <label class="form-label" for="gender">Пол</label>
+                                                        </div>
+                                                        <select name="" id="gender">
+                                                            <option value="">Мужской</option>
+                                                            <option value="">Женский</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="span6">
+                                                        <label class="form-label" for="datepicker">Дата рождения</label>
+                                                        <div data-date="12-02-2012" data-date-format="dd-mm-yyyy" id="dp1" class=" b-input-i line login-form__datepicker line">
+                                                            <span class="form__add-on"><i class="ico ico-calendar"></i></span>
+                                                            <input id="datepicker" type="text" value="12-02-2012" size="16" class="b-input datepicker">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row-fluid">
+                                                    <label class="form-label" for="city">Город</label>
+                                                </div>
+                                                <div class="row-fluid form__row">
+                                                    <div class="b-input-i line form__error"><input id="city" type="text" placeholder="" value="Сообщение об ошибке" class="b-input"></div>
+                                                </div>
+                                                <div class="row-fluid form__row">
+                                                    <div class="span5">
+                                                        <div class="form__captcha">
+                                                            <img src="img/bg-captcha.gif" alt=""/>
+                                                        </div>
+                                                        <a class="form__update" href="javascript:void(0);">
+                                                            <i class="ico ico-update"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="span7">
+                                                        <label class="form-label" for="captcha">Введите символы с картинки</label>
+                                                        <div class="b-input-i line"><input id="captcha" type="text" value="" class="b-input"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form__row">
+                                                    <span class="form__important">* обязательные для заполнения поля</span>
+                                                </div>
+                                                <div class="row_fluid">
+                                                    <a class="button save-button" href="javascript:void(0);"><span>Зарегистрироваться</span></a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-column">
+                            <div class="current clearfix">
+                                <i class="ico ico-time"></i>
+                                <time class="current__current-time">13:45</time>
+                                <time class="current__current-date">24.02.2013</time>
+                                <div class="current__news">
+                                    <span class="current__news-ttl">Сегодня:</span>
+                                    <div class="current__news-list">
+                                        <div class="current__news-item">
+                                            <a class="current__news-link" href="javascript:void(0);">Митинг ЛДПР прошел на Пушкинской площади с традиционными кашей и чаем</a>
+                                        </div>
+                                    </div>
+                                    <div class="current__news-paging">
+                                        <a class="current__bnt-prev" href="javascript:void(0);">Назад</a>
+                                        <a class="current__bnt-next" href="javascript:void(0);">Вперед</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header class="hdr">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="span4 vcard"><h1 class="hdr__logo"><a class="fn org url" rel="index" href="javascript:void(0);">Росинформбюро</a></h1></div>
+                        <div class="span5">
+                            <form class="search-form search-form_hdr" action="#">
+                                <div class="b-search clearfix">
+                                    <div class="b-input-i">
+                                        <input class="b-input" type="text"/>
+                                        <a class="search__button" href="javascript:void(0);">
+                                            <i class="ico ico-search__button_hdr"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="span3">
+                            <dl class="hdr__info">
+                                <dt class="hdr__info-ttl">ЦБ USD</dt>
+                                <dd class="hdr__info-desc"><strong>30.3596</strong> (<span class="mark-green">+0.1259</span>)</dd>
+                                <dt class="hdr__info-ttl">EUR</dt>
+                                <dd class="hdr__info-desc"><strong>40.1111</strong> (<span class="mark-red">-0.0363</span>)</dd>
+                                <dt class="hdr__info-ttl">Москва</dt>
+                                <dd class="hdr__info-desc"><strong>Ясно, без осадков,</strong> 0...2°С</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <nav class="nav-top">
+                        <div class="nav-top__holder clearfix">
+                            <div class="span8">
+                                <ul class="nav-top__main">
+                                    <li class="nav-top__main__item nav-top__main__item_global">
+                                        <a href="javascript:void(0);" class="nav-top__main__link nav-top__main__link_global"><i class="ico ico-global"></i> <i class="ico ico-global-more"></i></a>
+                                        <div class="drop">
+                                            <div class="drop__holder line">
+                                                <div class="drop__col drop__col_wide">
+                                                    <div class="drop__box">
+                                                        <strong class="drop__ttl mark-red">Все разделы</strong>
+                                                        <ul class="drop__menu">
+                                                            <li class="drop__menu-item"><a href="javascript:void(0);">Лента новостей</a></li>
+                                                            <li class="drop__menu-item"><a href="javascript:void(0);">Авторские колонки</a></li>
+                                                            <li class="drop__menu-item"><a href="javascript:void(0);">Блоги</a></li>
+                                                            <li class="drop__menu-item"><a href="javascript:void(0);">Интервью</a></li>
+                                                            <li class="drop__menu-item"><a href="javascript:void(0);">Фоторепортажи</a></li>
+                                                            <li class="drop__menu-item"><a href="javascript:void(0);">Видео</a></li>
+                                                            <li class="drop__menu-item"><a href="javascript:void(0);">Инфографика</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <ul class="drop__menu">
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">О проекте</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Редакция</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Условия</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Обратная связь</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="drop__col">
+                                                    <strong class="drop__ttl"><a href="javascript:void(0);">Политика</a></strong>
+                                                    <ul class="drop__menu">
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Власть</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Оппозиция</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Внешняя политика</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Партии</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Регионы</a></li>
+                                                    </ul>
+                                                    <strong class="drop__ttl"><a href="javascript:void(0);">Армия</a></strong>
+                                                    <ul class="drop__menu">
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Минобороны</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Авиация</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Флот</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Космос</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Скандалы</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="drop__col">
+                                                    <strong class="drop__ttl"><a href="javascript:void(0);">Общество</a></strong>
+                                                    <ul class="drop__menu">
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Город</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Суд</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Религия</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Образование</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Технологии</a></li>
+                                                    </ul>
+                                                    <strong class="drop__ttl"><a href="javascript:void(0);">Безопасность</a></strong>
+                                                    <ul class="drop__menu">
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Военные учения</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Оружие России</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Транспортная безопасность</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Партии</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Разведка</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="drop__col drop__col_small">
+                                                    <strong class="drop__ttl"><a href="javascript:void(0);">Экономика</a></strong>
+                                                    <ul class="drop__menu">
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Финансы</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Котировки</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Промышленность</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Энергетика</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Недвижимость</a></li>
+                                                    </ul>
+                                                    <strong class="drop__ttl"><a href="javascript:void(0);">Впк</a></strong>
+                                                    <ul class="drop__menu">
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Предприятия</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Новые технологии</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Роскосмос</a></li>
+                                                        <li class="drop__menu-item"><a href="javascript:void(0);">Международные контракты</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-top__main__item"><a class="nav-top__main__link" href="javascript:void(0);" >ГЛАВНОЕ</a></li>
+                                    <li class="nav-top__main__item"><a class="nav-top__main__link" href="javascript:void(0);">ПОЛИТИКА</a></li>
+                                    <li class="nav-top__main__item"><a class="nav-top__main__link" href="javascript:void(0);">ОБЩЕСТВО</a></li>
+                                    <li class="nav-top__main__item"><a class="nav-top__main__link" href="javascript:void(0);">ЭКОНОМИКА</a></li>
+                                    <li class="nav-top__main__item"><a class="nav-top__main__link" href="javascript:void(0);">АРМИЯ</a></li>
+                                    <li class="nav-top__main__item"><a class="nav-top__main__link" href="javascript:void(0);">БЕЗОПАСНОСТЬ</a></li>
+                                    <li class="nav-top__main__item"><a class="nav-top__main__link" href="javascript:void(0);">ВПК</a></li>
+                                </ul>
+                            </div>
+                            <div class="span4">
+                                <ul class="nav-top__main nav-top__main_alignright">
+                                    <li class="nav-top__main__item"><a class="nav-top__main__link" href="javascript:void(0);">Фоторепортажи</a></li>
+                                    <li class="nav-top__main__item"><a class="nav-top__main__link" href="javascript:void(0);">инфографика</a></li>
+                                    <li class="nav-top__main__item"><a class="nav-top__main__link" href="javascript:void(0);">видео</a></li>
+                                    <li class="nav-top__main__item"><a class="nav-top__main__link" href="javascript:void(0);">авторы</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="nav-top__inner clearfix">
+                            <div class="span12">
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="main-cnt">
+                <div class="news-section news-section_nopading">
+                    <div class="container-fluid">
+                        <div class="row-fluid">
+                            <aside class="aside-column">
+                                <div class="rubrics">
+                                    <h3 class="rubrics__ttl">Рубрики</h3>
+                                    <ul class="rubrics__list">
+                                        <li class="rubrics__list-item"><a class="rubrics__list-link" href="javascript:void(0);">ПОЛИТИКА</a></li>
+                                        <li class="rubrics__list-item"><a class="rubrics__list-link" href="javascript:void(0);">ОБЩЕСТВО</a></li>
+                                        <li class="rubrics__list-item"><a class="rubrics__list-link" href="javascript:void(0);">АРМИЯ</a></li>
+                                        <li class="rubrics__list-item"><a class="rubrics__list-link" href="javascript:void(0);">ВПК</a></li>
+                                        <li class="rubrics__list-item"><a class="rubrics__list-link" href="javascript:void(0);">ЭКОНОМИКА</a></li>
+                                        <li class="rubrics__list-item"><a class="rubrics__list-link" href="javascript:void(0);">БЕЗОПАСНОСТЬ</a></li>
+                                        <li class="rubrics__divider"></li>
+                                        <li class="rubrics__list-item"><a class="rubrics__list-link" href="javascript:void(0);">ИНТЕРВЬЮ</a></li>
+                                        <li class="rubrics__list-item"><a class="rubrics__list-link" href="javascript:void(0);">СПЕЦ.ПРОЕКТЫ</a></li>
+                                    </ul>
+                                </div>
+                                <div class="widget widget_category">
+                                    <h2 class="widget__head">Последние новости</h2>
+                                    <div class="latest-news">
+                                        <ul class="latest-news__newslist">
+                                            <li class="latest-news__newslist-item">
+                                                <a class="latest-news__newslist-link" href="javascript:void(0);"><span class="g-red">17:03</span> Военнослужащие внутренних войск МВД России задерживают условного </a>
+                                            </li>
+                                            <li class="latest-news__newslist-item">
+                                                <a class="latest-news__newslist-link" href="javascript:void(0);"><span class="g-red">16:45</span> В камчатской колонии после драки объявили голодовку</a>
+                                            </li>
+                                            <li class="latest-news__newslist-item">
+                                                <a class="latest-news__newslist-link" href="javascript:void(0);"><span class="g-red">14:24</span> Испанская газета сравнила Ангелу Меркель с Гитлером</a>
+                                            </li>
+                                            <li class="latest-news__newslist-item">
+                                                <a class="latest-news__newslist-link" href="javascript:void(0);"><span class="g-red">14:04</span> Capcom выпустит римейк «Утиных историй»</a>
+                                            </li>
+                                            <li class="latest-news__newslist-item">
+                                                <a class="latest-news__newslist-link" href="javascript:void(0);"><span class="g-red">13:02</span> Белорусская оппозиция отметила свой главный праздник</a>
+                                            </li>
+                                            <li class="latest-news__newslist-item">
+                                                <a class="latest-news__newslist-link" href="javascript:void(0);"><span class="g-red">13:02</span> Минни Маус обзавелась первым дизайнерским платьем</a>
+                                            </li>
+                                            <li class="latest-news__newslist-item latest-news__newslist-item_lst">
+                                                <a class="latest-news__all-link" href="javascript:void(0);">все новости<span class="ico ico-view-all_red"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="category-news category-news_article-page">
+                                    <ul class="category-news__block">
+                                        <li class="category-news__block-item">
+                                            <h2><span class="ico ico-arrow"></span>последнее видео</h2>
+                                            <div class="category-news__block-time line">
+                                                <time class="category-news__block-date">22.03.2013, 14:34</time>
+                                                <div class="category-news__block-count">
+                                                    <time><span class="ico ico-dur"></span>0:40</time>
+                                                    <time>4.30mb</time>
+                                                </div>
+                                            </div>
+                                            <a class="category-news__block-video" href="javascript:void(0);">
+                                                <span class="visual-item__video-box__btn-play"></span>
+                                                <img src="img/stub/img11.jpg" alt="">
+                                            </a>
+                                            <a class="category-news__block-head" href="javascript:void(0);">Автобус в кювете и буксующие машины: последствия "бури столетия" в США</a>
+                                            <div class="actual-news__info">
+                                                <div class="actual-news__info-box">
+                                                    <i class="ico ico-comments"></i>
+                                                    <a href="javascript:void(0);">154</a>
+                                                </div>
+                                                <div class="actual-news__info-box">
+                                                    <i class="ico ico-viewers"></i>
+                                                    <a href="javascript:void(0);">11 541</a>
+                                                </div>
+                                            </div>
+                                            <a class="latest-news__all-link" href="javascript:void(0);">все видео<span class="ico ico-view-all_red"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="parenters-news parenters-news_asd parenters-news_article-page">
+                                    <h2 class="parenters-news__head parenters-news__head_asd">Новости партнеров</h2>
+                                    <h3 class="parenters-news__sub-head">Риановости</h3>
+                                    <div class="parenters-news__item">
+                                        <a href="javascript:void(0);">
+                                            <img class="parenters-news__item-img" src="img/stub/img27.jpg" alt="Image description"/>
+                                        </a>
+                                        <div class="parenters-news__item-text">
+                                            <a class="parenters-news__link" href="javascript:void(0);">Передаче "Пусть говорят" грозит закрытие из-за страшного скандала</a>
+                                        </div>
+                                    </div>
+                                    <div class="parenters-news__item">
+                                        <a href="javascript:void(0);">
+                                            <img class="parenters-news__item-img" src="img/stub/img28.jpg" alt="Image description"/>
+                                        </a>
+                                        <div class="parenters-news__item-text">
+                                            <a class="parenters-news__link" href="javascript:void(0);">Поступок Алины Кабаевой возмутил известную актрису</a>
+                                        </div>
+                                    </div>
+                                    <div class="parenters-news__item">
+                                        <a href="javascript:void(0);">
+                                            <img class="parenters-news__item-img" src="img/stub/img29.jpg" alt="Image description"/>
+                                        </a>
+                                        <div class="parenters-news__item-text">
+                                            <a class="parenters-news__link" href="javascript:void(0);">Наконец стало понятно, почему Собчак вышла замуж за Виторгана</a>
+                                        </div>
+                                    </div>
+                                    <div class="parenters-news__item">
+                                        <a href="javascript:void(0);">
+                                            <img class="parenters-news__item-img" src="img/stub/img30.jpg" alt="Image description"/>
+                                        </a>
+                                        <div class="parenters-news__item-text">
+                                            <a class="parenters-news__link" href="javascript:void(0);">Второй допрос Сердюкова. Следователи уже не сдержались</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                            <div class="content-column">
+                                <div class="row-fluid">
+                                    <div class="main-news article-area">
+                                        <div class="row-fluid">
+                                            <header class="main-news__head">
+                                                <h2 class="main-news__head-title clearfix">
+                                                    <a class="article-area__head-link" href="javascript:void(0);">
+                                                        <i class="ico ico-video_big"></i>Видео
+                                                    </a>
+                                                </h2>
+                                            </header>
+                                        </div>
+                                        <div class="row-fluid">
+                                            <div class="column2">
+                                                <article class="article">
+                                                    <div class="article__photo">
+                                                        <a href="javascript:void(0);">
+                                                            <img src="img/stub/img78.jpg" alt="Image description"/>
+                                                        </a>
+                                                    </div>
+                                                    <dl class="article__cnt">
+                                                        <dt class="article__head">
+                                                            <a class="article__category" href="javascript:void(0);">Минобороны</a>
+                                                            <span class="article__date">22.03.2013, 14:34</span>
+                                                        </dt>
+                                                        <dd class="article__txt">
+                                                            <a class="article__ttl" href="javascript:void(0);">Подводные силы оснастят высокоточным оружием</a>
+                                                        </dd>
+                                                    </dl>
+                                                    <div class="article__info clearfix">
+                                                        <div class="article__info-box">
+                                                            <i class="ico ico-dur"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">0:40  </a>
+                                                        </div>
+                                                        <div class="article__info-box">
+                                                            <i class="ico ico-comments"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">154</a>
+                                                        </div>
+                                                        <div class="article__info-box">
+                                                            <i class="ico ico-viewers"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">11 541</a>
+                                                        </div>
+                                                        <div class="article__info-box">
+                                                            <a class="visual-item__info-link" href="javascript:void(0);"> 4.30mb</a>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="column2">
+                                                <article class="article">
+                                                    <div class="article__photo">
+                                                        <a href="javascript:void(0);">
+                                                            <img src="img/stub/img79.jpg" alt="Image description"/>
+                                                        </a>
+                                                    </div>
+                                                    <dl class="article__cnt">
+                                                        <dt class="article__head">
+                                                            <a class="article__category" href="javascript:void(0);">здравоохранение</a>
+                                                            <span class="article__date">22.03.2013, 14:34</span>
+                                                        </dt>
+                                                        <dd class="article__txt">
+                                                            <a class="article__ttl" href="javascript:void(0);">Удмуртская порча</a>
+                                                        </dd>
+                                                    </dl>
+                                                    <div class="article__info clearfix">
+                                                        <div class="article__info-box">
+                                                            <i class="ico ico-dur"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">0:40  </a>
+                                                        </div>
+                                                        <div class="article__info-box">
+                                                            <i class="ico ico-comments"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">154</a>
+                                                        </div>
+                                                        <div class="article__info-box">
+                                                            <i class="ico ico-viewers"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">11 541</a>
+                                                        </div>
+                                                        <div class="article__info-box">
+                                                            <a class="visual-item__info-link" href="javascript:void(0);"> 4.30mb</a>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </div>
+                                        <div class="row-fluid">
+                                            <div class="column3">
+                                                <article class="article article_small article_small_video">
+                                                    <div class="article__photo">
+                                                        <a href="javascript:void(0);">
+                                                            <img src="img/stub/img80.jpg" alt="Image description"/>
+                                                        </a>
+                                                    </div>
+                                                    <dl class="article__cnt">
+                                                        <dt class="article__head">
+                                                            <a class="article__category" href="javascript:void(0);">Авиация</a>
+                                                            <span class="article__date">22.02.2013 15:25</span>
+                                                        </dt>
+                                                        <dd class="article__txt">
+                                                            <a class="article__ttl" href="javascript:void(0);">Штурмовик Су-25 оснастят системой для уничтожения «Пэтриотов»</a>
+                                                        </dd>
+                                                    </dl>
+                                                    <div class="article__info clearfix">
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-dur"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">0:40  </a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-comments"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">154</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-viewers"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">11 541</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <a class="visual-item__info-link" href="javascript:void(0);"> 4.30mb</a>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="column3">
+                                                <article class="article article_small article_small_video">
+                                                    <div class="article__photo">
+                                                        <a href="javascript:void(0);">
+                                                            <img src="img/stub/img81.jpg" alt="Image description"/>
+                                                        </a>
+                                                    </div>
+                                                    <dl class="article__cnt">
+                                                        <dt class="article__head">
+                                                            <a class="article__category" href="javascript:void(0);">Минобороны</a>
+                                                            <span class="article__date">22.02.2013 15:25</span>
+                                                        </dt>
+                                                        <dd class="article__txt">
+                                                            <a class="article__ttl" href="javascript:void(0);">Главная находка для шпионов оказалась в Англии</a>
+                                                        </dd>
+                                                    </dl>
+                                                    <div class="article__info clearfix">
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-dur"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">0:40  </a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-comments"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">154</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-viewers"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">11 541</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <a class="visual-item__info-link" href="javascript:void(0);"> 4.30mb</a>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="column3">
+                                                <article class="article article_small article_small_video">
+                                                    <div class="article__photo">
+                                                        <a href="javascript:void(0);">
+                                                            <img src="img/stub/img82.jpg" alt="Image description"/>
+                                                        </a>
+                                                    </div>
+                                                    <dl class="article__cnt">
+                                                        <dt class="article__head">
+                                                            <a class="article__category" href="javascript:void(0);">Минобороны</a>
+                                                            <span class="article__date">22.02.2013 15:25</span>
+                                                        </dt>
+                                                        <dd class="article__txt">
+                                                            <a class="article__ttl" href="javascript:void(0);">Russia Gets New Military uniforms</a>
+                                                        </dd>
+                                                    </dl>
+                                                    <div class="article__info clearfix">
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-dur"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">0:40  </a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-comments"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">154</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-viewers"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">11 541</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <a class="visual-item__info-link" href="javascript:void(0);"> 4.30mb</a>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </div>
+                                        <div class="row-fluid">
+                                            <div class="column3">
+                                                <article class="article article_small article_small_video">
+                                                    <div class="article__photo">
+                                                        <a href="javascript:void(0);">
+                                                            <img src="img/stub/img83.jpg" alt="Image description"/>
+                                                        </a>
+                                                    </div>
+                                                    <dl class="article__cnt">
+                                                        <dt class="article__head">
+                                                            <a class="article__category" href="javascript:void(0);">Авиация</a>
+                                                            <span class="article__date">22.02.2013 15:25</span>
+                                                        </dt>
+                                                        <dd class="article__txt">
+                                                            <a class="article__ttl" href="javascript:void(0);">Штурмовик Су-25 оснастят системой для уничтожения «Пэтриотов»</a>
+                                                        </dd>
+                                                    </dl>
+                                                    <div class="article__info clearfix">
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-dur"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">0:40  </a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-comments"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">154</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-viewers"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">11 541</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <a class="visual-item__info-link" href="javascript:void(0);"> 4.30mb</a>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="column3">
+                                                <article class="article article_small article_small_video">
+                                                    <div class="article__photo">
+                                                        <a href="javascript:void(0);">
+                                                            <img src="img/stub/img84.jpg" alt="Image description"/>
+                                                        </a>
+                                                    </div>
+                                                    <dl class="article__cnt">
+                                                        <dt class="article__head">
+                                                            <a class="article__category" href="javascript:void(0);">Минобороны</a>
+                                                            <span class="article__date">22.02.2013 15:25</span>
+                                                        </dt>
+                                                        <dd class="article__txt">
+                                                            <a class="article__ttl" href="javascript:void(0);">Russia Gets New Military uniforms</a>
+                                                        </dd>
+                                                    </dl>
+                                                    <div class="article__info clearfix">
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-dur"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">0:40  </a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-comments"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">154</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-viewers"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">11 541</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <a class="visual-item__info-link" href="javascript:void(0);"> 4.30mb</a>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="column3">
+                                                <article class="article article_small article_small_video">
+                                                    <div class="article__photo">
+                                                        <a href="javascript:void(0);">
+                                                            <img src="img/stub/img85.jpg" alt="Image description"/>
+                                                        </a>
+                                                    </div>
+                                                    <dl class="article__cnt">
+                                                        <dt class="article__head">
+                                                            <a class="article__category" href="javascript:void(0);">Минобороны</a>
+                                                            <span class="article__date">22.02.2013 15:25</span>
+                                                        </dt>
+                                                        <dd class="article__txt">
+                                                            <a class="article__ttl" href="javascript:void(0);">Russia Gets New Military uniforms</a>
+                                                        </dd>
+                                                    </dl>
+                                                    <div class="article__info clearfix">
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-dur"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">0:40  </a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-comments"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">154</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-viewers"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">11 541</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <a class="visual-item__info-link" href="javascript:void(0);"> 4.30mb</a>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </div>
+                                        <div class="row-fluid">
+                                            <div class="column3">
+                                                <article class="article article_small article_small_video">
+                                                    <div class="article__photo">
+                                                        <a href="javascript:void(0);">
+                                                            <img src="img/stub/img86.jpg" alt="Image description"/>
+                                                        </a>
+                                                    </div>
+                                                    <dl class="article__cnt">
+                                                        <dt class="article__head">
+                                                            <a class="article__category" href="javascript:void(0);">Авиация</a>
+                                                            <span class="article__date">22.02.2013 15:25</span>
+                                                        </dt>
+                                                        <dd class="article__txt">
+                                                            <a class="article__ttl" href="javascript:void(0);">Штурмовик Су-25 оснастят системой для уничтожения «Пэтриотов»</a>
+                                                        </dd>
+                                                    </dl>
+                                                    <div class="article__info clearfix">
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-dur"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">0:40  </a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-comments"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">154</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-viewers"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">11 541</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <a class="visual-item__info-link" href="javascript:void(0);"> 4.30mb</a>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="column3">
+                                                <article class="article article_small article_small_video">
+                                                    <div class="article__photo">
+                                                        <a href="javascript:void(0);">
+                                                            <img src="img/stub/img87.jpg" alt="Image description"/>
+                                                        </a>
+                                                    </div>
+                                                    <dl class="article__cnt">
+                                                        <dt class="article__head">
+                                                            <a class="article__category" href="javascript:void(0);">Минобороны</a>
+                                                            <span class="article__date">22.02.2013 15:25</span>
+                                                        </dt>
+                                                        <dd class="article__txt">
+                                                            <a class="article__ttl" href="javascript:void(0);">Russia Gets New Military uniforms</a>
+                                                        </dd>
+                                                    </dl>
+                                                    <div class="article__info clearfix">
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-dur"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">0:40  </a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-comments"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">154</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-viewers"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">11 541</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <a class="visual-item__info-link" href="javascript:void(0);"> 4.30mb</a>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="column3">
+                                                <article class="article article_small article_small_video">
+                                                    <div class="article__photo">
+                                                        <a href="javascript:void(0);">
+                                                            <img src="img/stub/img88.jpg" alt="Image description"/>
+                                                        </a>
+                                                    </div>
+                                                    <dl class="article__cnt">
+                                                        <dt class="article__head">
+                                                            <a class="article__category" href="javascript:void(0);">Минобороны</a>
+                                                            <span class="article__date">22.02.2013 15:25</span>
+                                                        </dt>
+                                                        <dd class="article__txt">
+                                                            <a class="article__ttl" href="javascript:void(0);">Russia Gets New Military uniforms</a>
+                                                        </dd>
+                                                    </dl>
+                                                    <div class="article__info clearfix">
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-dur"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">0:40  </a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-comments"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">154</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <i class="ico ico-viewers"></i>
+                                                            <a class="article__info-link" href="javascript:void(0);">11 541</a>
+                                                        </div>
+                                                        <div class="article__info-box article__info-box_video">
+                                                            <a class="visual-item__info-link" href="javascript:void(0);"> 4.30mb</a>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </div>
+                                        <div class="row-fluid">
+                                            <a class="main-news__show-items main-news__show-items_video" href="javascript:void(0);">показать еще<span class="ico ico-show"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="partners-section">
+                    <div class="container-fluid">
+                        <div class="row-fluid">
+                            <div class="parenters-news parenters-news_cnt">
+                                <h2 class="parenters-news__head parenters-news__head_cnt">Новости партнеров</h2>
+                                <h3 class="parenters-news__sub-head">Газета.RU</h3>
+                                <div class="row-fluid">
+                                    <div class="span3">
+                                        <div class="parenters-news__item">
+                                            <a href="javascript:void(0);">
+                                                <img class="parenters-news__item-img" src="img/stub/img27.jpg" alt="Image description"/>
+                                            </a>
+                                            <div class="parenters-news__item-text">
+                                                <a class="parenters-news__link" href="javascript:void(0);">Передаче "Пусть говорят" грозит закрытие из-за страшного скандала</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span3">
+                                        <div class="parenters-news__item">
+                                            <a href="javascript:void(0);">
+                                                <img class="parenters-news__item-img" src="img/stub/img28.jpg" alt="Image description"/>
+                                            </a>
+                                            <div class="parenters-news__item-text">
+                                                <a class="parenters-news__link" href="javascript:void(0);">Поступок Алины Кабаевой возмутил известную актрису</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span3">
+                                        <div class="parenters-news__item">
+                                            <a href="javascript:void(0);">
+                                                <img class="parenters-news__item-img" src="img/stub/img29.jpg" alt="Image description"/>
+                                            </a>
+                                            <div class="parenters-news__item-text">
+                                                <a class="parenters-news__link" href="javascript:void(0);">Наконец стало понятно, почему Собчак вышла замуж за Виторгана</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span3">
+                                        <div class="parenters-news__item">
+                                            <a href="javascript:void(0);">
+                                                <img class="parenters-news__item-img" src="img/stub/img30.jpg" alt="Image description"/>
+                                            </a>
+                                            <div class="parenters-news__item-text">
+                                                <a class="parenters-news__link" href="javascript:void(0);">Второй допрос Сердюкова. Следователи уже не сдержались</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer class="ftr">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="span9">
+                            <div class="row-fluid">
+                                <div class="span10">
+                                    <form class="search-form search-form__ftr clearfix" action="#">
+                                        <div class="b-search">
+                                            <div class="b-input-i">
+                                                <input class="b-input" type="text"/>
+                                                <a class="search__button" href="javascript:void(0);">
+                                                    <i class="ico ico-search__button_ftr"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span10">
+                                    <ul class="ftr-nav">
+                                        <li class="ftr-nav__item"><a class="ftr-nav__item-link" href="javascript:void(0);">О проекте</a></li>
+                                        <li class="ftr-nav__item"><a class="ftr-nav__item-link" href="javascript:void(0);">Редакция</a></li>
+                                        <li class="ftr-nav__item"><a class="ftr-nav__item-link" href="javascript:void(0);">Условия использования материалов</a></li>
+                                        <li class="ftr-nav__item"><a class="ftr-nav__item-link" href="javascript:void(0);">Форма обратной связи</a></li>
+                                    </ul>
+                                    <div class="ftr__social">
+                                        <a class="ico ico_ftr_fb" href="javascript:void(0);"></a>
+                                        <a class="ico ico_ftr_tw" href="javascript:void(0);"></a>
+                                        <a class="ico ico_ftr_vk" href="javascript:void(0);"></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <p class="ftr__copyright">&copy; 2013 РОСИНФОРМБЮРО</p>
+                                    <p>Сетевое издание «РОСИНФОРМБЮРО» зарегистрировано в Федеральной службе по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) 10 апреля 2013 г. Свидетельство о регистрации Эл № ФС77-49726</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span3">
+                            <span class="age-category">18+</span>
+                            <a class="ftr__by" href="javascript:void(0);">Разработка сайта: <span class="ftr__by-name">FAKE studio</span></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div id="sticker" class="quick-nav__block">
+                <ul class="quick-nav">
+                    <li class="quick-nav__item">
+                        <a class="quick-nav__item-link" href="javascript:void(0);"><i class="ico ico-flash_big"></i></a>
+                        <div class="quick-nav__tooltip">
+                            флеш новости
+                        </div>
+                    </li>
+                    <li class="quick-nav__item">
+                        <a class="quick-nav__item-link" href="javascript:void(0);"><i class="ico ico-photo_big"></i></a>
+                        <div class="quick-nav__tooltip">
+                            фотографии
+                        </div>
+                    </li>
+                    <li class="quick-nav__item">
+                        <a class="quick-nav__item-link" href="javascript:void(0);"><i class="ico ico-video"></i></a>
+                        <div class="quick-nav__tooltip">
+                            видео
+                        </div>
+                    </li>
+                    <li class="quick-nav__item">
+                        <a class="quick-nav__item-link" href="javascript:void(0);"><i class="ico ico-images"></i></a>
+                        <div class="quick-nav__tooltip">
+                            инфографика
+                        </div>
+                    </li>
+                    <li class="quick-nav__item">
+                        <a class="quick-nav__item-link" href="javascript:void(0);"><i class="ico ico-contacts"></i></a>
+                        <div class="quick-nav__tooltip">
+                            авторские колонки
+                        </div>
+                    </li>
+                    <li class="quick-nav__item">
+                        <a class="quick-nav__item-link" href="javascript:void(0);"><i class="ico ico-write"></i></a>
+                        <div class="quick-nav__tooltip">
+                            авторские колонки
+                        </div>
+                    </li>
+                    <li class="quick-nav__item">
+                        <a class="quick-nav__item-link" href="javascript:void(0);"><i class="ico ico-mic"></i></a>
+                        <div class="quick-nav__tooltip">
+                            авторские колонки
+                        </div>
+                    </li>
+                    <li class="quick-nav__item">
+                        <a class="quick-nav__item-link" href="javascript:void(0);"><i class="ico ico-rss"></i></a>
+                        <div class="quick-nav__tooltip">
+                            авторские колонки
+                        </div>
+                    </li>
+                    <li class="quick-nav__item">
+                        <a class="quick-nav__item-link" href="javascript:void(0);"><i class="ico ico-top"></i></a>
+                        <div class="quick-nav__tooltip">
+                            наверх
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
